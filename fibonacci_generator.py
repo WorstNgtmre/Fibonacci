@@ -4,6 +4,8 @@ def fibonacci_list(n: int) -> list:
     numbers = [0, 1]
     for i in range(n - 2):
         numbers.append(int(numbers[i] + numbers[i + 1]))
+        phi_estimation = numbers[-1] / numbers[-2]
+        print(f"Estimación de Phi después de {len(numbers)} números: {phi_estimation}")
     return numbers
 
 def fibonacci_index(n: int) -> int:
